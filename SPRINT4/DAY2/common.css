@@ -1,0 +1,51 @@
+#frend{
+    /* border: 1px solid green; */
+    background-color: rgb(88, 88, 185);
+    padding: 20px;
+    margin: auto;
+    margin-top: 15px;
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly ;
+    
+}
+a{
+text-decoration: none;
+color: white;
+padding-left: 200px;
+padding-right: 200px;
+font-size: larger;
+}
+#form{
+    text-align: center;
+    margin-top: 30px;
+}
+#container{
+    display: grid;
+    width: 85%;
+    height: auto;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+    text-align: center;
+}
+p+img{
+    width: 45%;
+    padding-top: -20px;
+    padding-bottom: -40px;
+    
+
+}
+div>img:first-child{
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#card{
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 20px;
+}
