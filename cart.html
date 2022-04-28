@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+
+<script>
+    var mensData=JSON.parse(localStorage.getItem("allData"));
+    displayData(mensData)
+function displayData(allData){
+    allData.forEach(function(el){
+    
+        var box=document.createElement("div");
+        box.setAttribute("id","box")
+
+        var image=document.createElement("img");
+        image.setAttribute("src",el.image_url );
+
+        var name=document.createElement("h3");
+        name.innerText=el.name;
+
+        var price=document.createElement("p");
+        price.innerText=el.price;
+
+        var strikedoffprice=document.createElement("p");
+        strikedoffprice.innerText=el.strikedoffprice;
+
+        var smallbox=document.createElement("div"); 
+        smallbox.setAttribute("id","smallbox")
+
+        console.log(image,price,name,btn)
+
+        smallbox.append(price,strikedoffprice)
+       
+        var btn=document.createElement("button");
+        btn.innerText="delete";
+        btn.addEventListener("click",function(){
+            deletedata(el)
+        })
+
+        box.append(image,name,smallbox,btn)
+
+        document.querySelector("#main").append(box);
+
+    })
+        
+    } 
+    var removedata=JSON.parse(localStorage.getItem("removeData"))
+
+    function deletedata(el){
+    
+    }
+    
+</script>
